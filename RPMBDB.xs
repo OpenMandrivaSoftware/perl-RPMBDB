@@ -20,7 +20,6 @@
 #undef Stat
 #undef Fstat
 
-#define _RPMGI_INTERNAL
 #define _RPMEVR_INTERNAL
 #define _RPMPS_INTERNAL
 #define _RPMDB_INTERNAL
@@ -51,6 +50,7 @@
     RPMVSF_NODSA |		\
     RPMVSF_NORSA )
 
+#include <rpmcli.h>
 #include <rpmio.h>
 #include <rpmtag.h>
 #include <rpmdb.h>
@@ -58,9 +58,7 @@
 #include <rpmcb.h>
 #include <rpmte.h>
 #include <rpmps.h>
-#include <rpmbuild.h>
 #include <rpmlog.h>
-#include <rpmconstant.h>
 
 #if BYTE_ORDER == LITTLE_ENDIAN
 #define bswap32(x) htobe32(x)
