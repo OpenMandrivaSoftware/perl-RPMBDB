@@ -1,4 +1,4 @@
-package LDetect;
+package RPMBDB;
 
 use strict;
 use warnings;
