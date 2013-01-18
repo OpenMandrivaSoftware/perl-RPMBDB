@@ -1,7 +1,7 @@
 use strict;
 use ExtUtils::MakeMaker;
 
-my $libs = "-L../rpmdb -lrpmdb -lrpm -lrpmio";
+my $libs = "-L../rpmdb/.libs -lrpmdb -L../lib/.libs -lrpm -L../rpmio/.libs -lrpmio";
 my $includes = '-I../rpmdb -I../lib -I../rpmio';
 my $ccflags = '-Wall -Wextra -std=gnu99';
 chomp($ccflags);
